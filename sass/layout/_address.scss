@@ -1,0 +1,42 @@
+/* адресс ссылка  */
+
+.address {
+  display: block;
+  width: 231px;
+  height: 132px;
+  margin-right: 70px;
+}
+.address__list {
+  font-style: normal;
+  margin-top: 20px;
+}
+.address__link {
+  display: block;
+  color: var(--second-background-color);
+  transition: color var(--transition-duration) var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+/* ауторизация в футере */
+.address-contacts {
+  margin-top: 9px;
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+.address-contacts__link {
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color var(--transition-duration) var(--transition-timing-function);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+// .footer-navig:hover .footer-navig-link,
+// .footer-navig-link:focus {
+//   color: var(--accent-color);
+// }

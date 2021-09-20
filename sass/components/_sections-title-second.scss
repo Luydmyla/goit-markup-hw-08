@@ -1,0 +1,11 @@
+/* заголовки второго уровня */
+.sections-title-second {
+  @include font($fs: 36px, $lh: 1.16, $ls: 0.03em);
+  // font-weight: 700;
+  // font-size: 36px;
+  // line-height: 1.16;
+  // letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--title-text-color);
+  margin-bottom: 50px;
+}

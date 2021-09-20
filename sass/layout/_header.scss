@@ -1,0 +1,132 @@
+/* -----HEADER------------------ */
+.header {
+  border-bottom: 1px solid #ececec;
+}
+.header {
+  .container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.navig {
+  display: flex;
+}
+
+/* site-navig */
+.site-navig {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .site-navig__link {
+    &.current {
+      color: var(--accent-color);
+    }
+  }
+}
+.site-navig__item {
+  position: relative;
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+  & .current::after {
+    position: absolute;
+    top: calc(100% - 1px);
+    /* bottom: -2px; */
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 2px;
+    content: "";
+    display: flex;
+    justify-content: center;
+  }
+
+  .site-navig__link {
+    @include font($fw: 500, $fs: 14px, $lh: 1.14, $ls: 0.02em);
+
+    // font-weight: 500;
+    // font-size: 14px;
+    // line-height: 1.14;
+    // letter-spacing: 0.02em;
+    display: block;
+    color: var(--title-text-color);
+    transition: color var(--transition-duration)
+      var(--transition-timing-function);
+    cursor: pointer;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+}
+
+// .site-item .link:hover,
+// .site-item .link:focus {
+//   color: var(--accent-color);
+// }
+
+// .site-item .current::after {
+//   position: absolute;
+//   top: calc(100% - 1px);
+//   /* bottom: -2px; */
+//   left: 0;
+//   width: 100%;
+//   height: 4px;
+//   background: var(--accent-color);
+//   border-radius: 2px;
+//   content: "";
+//   display: flex;
+//   justify-content: center;
+// }
+/* ----ИКОНКИ ПЕРЕД ПОЧТОЙ И ТЕЛЕФОНОМ */
+
+.site-contact__item {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+.site-contact__icon {
+  /* fill: var(--primary-text-color); */
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+.site-contact {
+  display: flex;
+  margin-left: auto;
+  .site-contact__link {
+    display: block;
+
+    @include font($fw: 500, $fs: 14px, $lh: 1.14, $ls: 0.02em);
+    // font-weight: 500;
+    // font-size: 14px;
+    // line-height: 1.14;
+    // letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+    cursor: pointer;
+    /* margin-top: 32px; */
+    /* margin-bottom: 32px; */
+    margin-left: auto;
+    transition: color var(--transition-duration)
+      var(--transition-timing-function);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+}
+// .auth-navig .link:hover,
+// .auth-navig .link:focus {
+//   color: var(--accent-color);
+// }

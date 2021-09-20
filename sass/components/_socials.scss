@@ -1,0 +1,61 @@
+.socials-list {
+  display: flex;
+  justify-content: center;
+}
+.socials-item {
+  width: 44px;
+  height: 44px;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.socials-item__link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: transparent;
+  // background-color: var(--background-color);
+  transition: background-color var(--transition-duration)
+    var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}
+
+// .socials-item:not(:last-child) {
+//   margin-right: 10px;
+// }
+
+.socials-item__icon {
+  background-color: transparent;
+  fill: var(--socials-icon-color-first);
+  transition: fill var(--transition-duration) var(--transition-timing-function),
+    background-color var(--transition-duration)
+      var(--transition-timing-function);
+  .socials-item__link:hover &,
+  .socials-item__link:focus & {
+    fill: var(--background-color);
+  }
+}
+
+.socials-item__link--dark {
+  background-color: var(--socials-icon-color-second);
+  transition: background-color var(--transition-duration)
+    var(--transition-timing-function);
+}
+.socials-item__icon-light {
+  fill: var(--second-text-color);
+}
+
+// .socials-link:hover,
+// .socials-link:focus,
+// .socials-link:hover .socials-icon,
+// .socials-link:focus .socials-icon {
+//   background-color: var(--accent-color);
+//   fill: var(--background-color);
+// }

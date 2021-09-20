@@ -1,0 +1,34 @@
+/* ------------HERO-------------- */
+.hero {
+  background-color: #2f303a;
+  color: var(--second-text-color);
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/fon-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* outline: 1px solid black; */
+}
+.hero__title {
+  @include font($fw: 900, $fs: 44px, $lh: 1.36);
+  // font-weight: 900;
+  // font-size: 44px;
+  // line-height: 1.36;
+  //  letter-spacing: 0.06em;
+  text-align: center;
+
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  min-width: 696px;
+}

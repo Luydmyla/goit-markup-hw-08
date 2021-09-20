@@ -1,0 +1,85 @@
+.footer-subscription {
+  /* display: flex; */
+  margin-top: 12px;
+  width: auto;
+  height: 86px;
+  align-items: center;
+}
+/* ----если текст"подпишись на рссылку не заголовок, то вот его стили"  */
+/* .subscription-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--second-text-color);
+} */
+.subscription-form {
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+.subscription-form__fild {
+  display: flex;
+  align-items: center;
+}
+.subscription-form__input {
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  padding: 0 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: var(--footer-background);
+  color: var(--second-text-color);
+  cursor: pointer;
+
+  &::placeholder {
+    @include font($fw: 400, $lh: 1.25, $ls: 0.03em);
+    // font-weight: 400;
+    // font-size: 16px;
+    // line-height: 1.25;
+    // letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color var(--transition-duration)
+      var(--transition-timing-function);
+
+    &:hover,
+    &:focus {
+      &::placeholder {
+        color: var(--accent-color);
+      }
+    }
+  }
+
+  .subscription-form__fild:hover &,
+  .subscription-form__fild:focus & {
+    border-color: var(--accent-color);
+  }
+}
+
+// .subscription-email:hover .form-email,
+// .subscription-email:focus .form-email {
+//   border-color: var(--accent-color);
+// }
+// .form-email::placeholder {
+//   font-weight: 400;
+//   font-size: 16px;
+//   line-height: 1.25;
+//   letter-spacing: 0.03em;
+//   color: rgba(255, 255, 255, 0.6);
+//   transition: color var(--transition-duration) var(--transition-timing-function);
+// }
+// .form-email:hover::placeholder,
+// .form-email:focus::placeholder {
+//   color: var(--accent-color);
+// }
+
+.subscription-form__icon {
+  margin-left: 10px;
+  background-color: transparent;
+  fill: var(--background-color);
+}

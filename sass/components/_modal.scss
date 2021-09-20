@@ -1,0 +1,94 @@
+/* ------МОДАЛЬНОЕ ОКНО---------- */
+/* ---бекдроп видимый----- */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  /* ---можно спозиционировать  модальное окно флексом */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  opacity: 1;
+  transition: opacity var(--transition-duration)
+    var(--transition-timing-function);
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    &.modal {
+      transform: translate(-50%, -50%) scale(0.1);
+    }
+  }
+}
+/*  ----- бекдроп и модальное окно в скрытом состоянии, стили для скрытого окна*/
+// .backdrop.is-hidden .modal {
+//   transform: translate(-50%, -50%) scale(0.1);
+// }
+/*----- само модальное окно--- */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  min-height: 581px;
+  padding: 40px;
+
+  background-color: var(--background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 750ms var(--transition-timing-function),
+    opacity 500ms var(--transition-timing-function);
+  opacity: 1;
+}
+
+/* ----КНОПКА ЗАКРЫТЬ---- */
+.modal__button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  transition: fill var(--transition-duration) var(--transition-timing-function);
+  cursor: pointer;
+  &:hover,
+  &:focus,
+  & .modal__button-icon:hover,
+  & .modal__button-icon:focus {
+    fill: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+}
+// .button-close:hover,
+// .button-close:focus,
+// .button-close .icon-close:hover,
+// .button-close .icon-close:focus {
+//   fill: var(--accent-color);
+//   border-color: var(--accent-color);
+// }
+.modal__button-icon {
+  fill: #000000;
+  transition: fill var(--transition-duration) var(--transition-timing-function);
+}
+
+.modal__header {
+  display: block;
+  @include font($fs: 20px, $lh: 1.15, $ls: 0.03em);
+  // font-weight: 700;
+  // font-size: 20px;
+  // line-height: 1.15;
+  // letter-spacing: 0.03em;
+  text-align: center;
+  margin-bottom: 12px;
+  color: var(--title-text-color);
+}
