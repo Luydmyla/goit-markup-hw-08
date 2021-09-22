@@ -822,13 +822,12 @@ img {
 
 /* -----СЕКЦИЯ ПОСТОЯННЫЕ КЛИЕНТЫ----- */
 .clients-list {
+  width: 480px;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
 .clients-list__link {
-  width: 210px;
   height: 92px;
   display: flex;
   align-items: center;
@@ -856,6 +855,7 @@ img {
 }
 
 .clients-list__item {
+  flex-basis: calc((100% - 60px) / 2);
   margin-right: 30px;
   margin-bottom: 30px;
 }

@@ -1,15 +1,16 @@
 /* -----СЕКЦИЯ ПОСТОЯННЫЕ КЛИЕНТЫ----- */
 .clients-list {
+  width: 480px;
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   flex-wrap: wrap;
 }
 .clients-list__link {
-  width: 210px;
   height: 92px;
   display: flex;
   align-items: center;
   justify-content: center;
+
   border: 1px solid var(--socials-icon-color-first);
   box-sizing: border-box;
   border-radius: 4px;
@@ -41,6 +42,8 @@
 //   fill: var(--accent-color);
 // }
 .clients-list__item {
+  // display: flex;
+  flex-basis: calc((100% - 60px) / 2);
   margin-right: 30px;
   margin-bottom: 30px;
   &:nth-child(2n) {
