@@ -2,17 +2,21 @@
   background-color: var(--second-background-color);
 }
 .team-list {
-  display: flex;
+  // display: flex;
   /* justify-content: space-between; */
+  // margin-bottom: 30px;
+  &:not(:last-child) {
+    margin-bottom: 0;
+  }
 }
 
 /* подзаголовки под фото секции наша комаанда  */
 .team-card__footer {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
 }
 .team-card__title {
-  @include font($fw: 500, $lh: 1.18, $ls: 0.03em);
+  @include font($fw: 500, $lh: 1.19, $ls: 0.03em);
   // font-weight: 500;
   // font-size: 16px;
   // line-height: 1.18;
@@ -21,17 +25,25 @@
   color: var(--title-text-color);
   margin-bottom: 10px;
 }
-.team__card {
-  width: 270px;
+.team-card {
+  min-width: 270px;
   background-color: var(--background-color);
   border-bottom: 0;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  margin-right: 30px;
-  &:last-child {
-    margin-right: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
   }
+  // margin-right: 30px;
+  // &:last-child {
+  //   margin-right: 0;
+  // }
+}
+.team-card_img {
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .team-card__footer {

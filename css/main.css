@@ -83,19 +83,17 @@ img {
   box-sizing: inherit;
 } */
 .container {
-  width: 1200px;
+  width: auto;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  /* outline: 2px solid tomato; */
-  /* background-color: rgba(234, 188, 243, 0.6); */
 }
 
 /*-------- sections--------- */
 .sections {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 /* ----------КНОПКА---------- */
@@ -132,12 +130,12 @@ img {
 /* заголовки второго уровня */
 .sections-title-second {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--title-text-color);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 /* логотип WebStudio*/
@@ -634,10 +632,10 @@ img {
   background-color: #2f303a;
   color: var(--second-text-color);
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  height: 600px;
-  max-width: 1600px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  height: 400px;
+  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/fon-hero.jpg);
@@ -649,27 +647,23 @@ img {
 
 .hero__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 30px;
-  min-width: 696px;
+  min-width: 360px;
 }
 
 /* ----------ПРЕИМУЩЕСТВА--------- */
-.feature-list {
-  display: flex;
-}
-
 .feature-list__item {
-  width: 270px;
-  margin-right: 30px;
+  width: auto;
+  margin-bottom: 30px;
 }
 
 .feature-list__item:last-child {
-  margin-right: 0;
+  margin-bottom: 0;
 }
 
 /* -----ИКОНКИ ПЕРЕД СЕКЦИЕЙ ПРЕИМУЩЕСТВА через backgroumd и befor */
@@ -701,21 +695,27 @@ img {
 } */
 /*  ------ИКОНКИ ПЕРЕД СЕКЦИЕЙ ПРЕИМУЖЕСТВА ЧЕРЕЗ ИНЛАЙН СВГ----- */
 .feature-list__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 270px;
+  display: block;
+  width: auto;
   height: 120px;
   background-color: var(--second-background-color);
   margin-bottom: 30px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.feature-list__svg {
+  display: block;
+  margin: auto;
 }
 
 /* заголовки в  секции особенности */
 .feature-list__text {
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.17;
+  line-height: 1.14;
   letter-spacing: 0.03em;
+  text-align: center;
   text-transform: uppercase;
   color: var(--title-text-color);
 }
@@ -771,37 +771,44 @@ img {
 }
 
 .team-list {
-  display: flex;
   /* justify-content: space-between; */
+}
+
+.team-list:not(:last-child) {
+  margin-bottom: 0;
 }
 
 /* подзаголовки под фото секции наша комаанда  */
 .team-card__footer {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
 }
 
 .team-card__title {
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.18;
+  line-height: 1.19;
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--title-text-color);
   margin-bottom: 10px;
 }
 
-.team__card {
-  width: 270px;
+.team-card {
+  min-width: 270px;
   background-color: var(--background-color);
   border-bottom: 0;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  margin-right: 30px;
 }
 
-.team__card:last-child {
-  margin-right: 0;
+.team-card:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.team-card_img {
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .team-card__footer p {
@@ -817,10 +824,11 @@ img {
 .clients-list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .clients-list__link {
-  width: 170px;
+  width: 210px;
   height: 92px;
   display: flex;
   align-items: center;
@@ -847,8 +855,17 @@ img {
   fill: var(--accent-color);
 }
 
-.clients-list__item:not(:last-child) {
+.clients-list__item {
   margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.clients-list__item:nth-child(2n) {
+  margin-right: 0;
+}
+
+.clients-list__item:nth-last-child(-n + 2) {
+  margin-bottom: 0;
 }
 
 /* футер */

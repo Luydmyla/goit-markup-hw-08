@@ -17,7 +17,6 @@
   justify-content: center;
   border-radius: 50%;
   background-color: transparent;
-  // background-color: var(--background-color);
   transition: background-color var(--transition-duration)
     var(--transition-timing-function);
 
@@ -26,10 +25,6 @@
     background-color: var(--accent-color);
   }
 }
-
-// .socials-item:not(:last-child) {
-//   margin-right: 10px;
-// }
 
 .socials-item__icon {
   background-color: transparent;
@@ -51,11 +46,3 @@
 .socials-item__icon-light {
   fill: var(--second-text-color);
 }
-
-// .socials-link:hover,
-// .socials-link:focus,
-// .socials-link:hover .socials-icon,
-// .socials-link:focus .socials-icon {
-//   background-color: var(--accent-color);
-//   fill: var(--background-color);
-// }

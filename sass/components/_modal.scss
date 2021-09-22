@@ -6,6 +6,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  // padding: 93px 15px 94px;
   background: rgba(0, 0, 0, 0.2);
   /* ---можно спозиционировать  модальное окно флексом */
   /* display: flex;
@@ -69,13 +70,7 @@
     border-color: var(--accent-color);
   }
 }
-// .button-close:hover,
-// .button-close:focus,
-// .button-close .icon-close:hover,
-// .button-close .icon-close:focus {
-//   fill: var(--accent-color);
-//   border-color: var(--accent-color);
-// }
+
 .modal__button-icon {
   fill: #000000;
   transition: fill var(--transition-duration) var(--transition-timing-function);
