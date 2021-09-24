@@ -1,4 +1,10 @@
 /* секция чем мы занимаемся */
+
+// @media screen and (min-width: 2000px) {
+//   .sections-work {
+//     display: block;
+//   }
+// }
 .sections-work {
   padding-top: 0;
 }
@@ -36,4 +42,9 @@
   text-transform: uppercase;
 
   color: var(--second-text-color);
+}
+@media screen and (max-width: 1199px) {
+  .sections-work {
+    display: none;
+  }
 }

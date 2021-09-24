@@ -844,6 +844,12 @@ img {
   color: var(--second-text-color);
 }
 
+@media screen and (max-width: 1199px) {
+  .sections-work {
+    display: none;
+  }
+}
+
 .sections-team {
   background-color: var(--second-background-color);
 }
