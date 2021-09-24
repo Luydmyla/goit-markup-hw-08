@@ -646,17 +646,10 @@ img {
   padding-bottom: 118px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mob/mobheader1x.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mob/mobheader1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* outline: 1px solid black; */
-}
-
-@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mob/mobheader2x.jpg);
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -665,21 +658,13 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tab/tabheader2x.jpg);
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    min-height: 600px;
+    max-width: 1600px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/deskheader1x.jpg);
-  }
-}
-
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/deskheader2x.jpg);
   }
 }
 
@@ -691,32 +676,68 @@ img {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 360px;
 }
 
 @media screen and (min-width: 480px) {
   .hero__title {
-    min-width: 480px;
     font-weight: 900;
     font-size: 26px;
     line-height: 1.62;
     letter-spacing: 0.06em;
+    max-width: 360px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero__title {
-    min-width: 1200px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
     letter-spacing: 0.06em;
+    max-width: 696px;
   }
 }
 
 /* ----------ПРЕИМУЩЕСТВА--------- */
+.feature-list {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .feature-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .feature-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
 .feature-list__item {
-  width: auto;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .feature-list__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .feature-list__item {
+    flex-basis: calc((100% - 120px) / 4);
+  }
 }
 
 .feature-list__item:last-child {
