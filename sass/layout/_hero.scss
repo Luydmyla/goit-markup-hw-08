@@ -1,12 +1,15 @@
 /* ------------HERO-------------- */
+// .hero-container {
+//   display: flex;
+//   padding: 0;
+// }
 .hero {
   background-color: #2f303a;
   color: var(--second-text-color);
+  flex-grow: 1;
   text-align: center;
   padding-top: 118px;
   padding-bottom: 118px;
-  height: 400px;
-  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(
@@ -14,14 +17,60 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/fon-hero.jpg);
+    url(../images/mob/mobheader1x.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   /* outline: 1px solid black; */
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/mob/mobheader2x.jpg);
+  }
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/tab/tabheader1x.jpg);
+  }
+  @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/tab/tabheader2x.jpg);
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/deskheader1x.jpg);
+  }
+  @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/deskheader2x.jpg);
+  }
 }
 .hero__title {
-  @include font($fw: 900, $fs: 26px, $lh: 1.62);
+  @include font($fw: 900, $fs: 20px, $lh: 1.62);
   // font-weight: 900;
   // font-size: 44px;
   // line-height: 1.36;
@@ -37,5 +86,15 @@
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 30px;
-  min-width: 360px;
+
+  @media screen and (min-width: 480px) {
+    min-width: 480px;
+    @include font($fw: 900, $fs: 26px, $lh: 1.62);
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-width: 1200px;
+
+    @include font($fw: 900, $fs: 44px, $lh: 1.36);
+  }
 }
