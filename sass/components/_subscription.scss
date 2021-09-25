@@ -1,13 +1,16 @@
 .footer-subscription {
+  // display: block;
   width: auto;
-  // height: 86px;
-  //
   text-align: center;
-  @media screen and (min-width: 768px) {
-    // display: flex;
-    align-items: center;
-    justify-content: center;
-    // margin-top: 12px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: block;
+    width: 100%;
+    padding-left: 90px;
+    padding-right: 63px;
+  }
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+    height: auto;
   }
 }
 /* ----если текст"подпишись на рссылку не заголовок, то вот его стили"  */
@@ -21,14 +24,26 @@
   color: var(--second-text-color);
 } */
 .subscription-form {
-  // display: flex;
-  // align-items: center;
   width: 100%;
   height: auto;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    width: auto;
+  }
 }
 .subscription-form__fild {
+  width: 100%;
   display: block;
   align-items: center;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: nowrap;
+    // margin-top: 12px;
+    width: 100%;
+    height: auto;
+    align-items: center;
+  }
 }
 .subscription-form__input {
   width: 100%;
@@ -46,10 +61,7 @@
 
   &::placeholder {
     @include font($fw: 400, $lh: 1.25, $ls: 0.03em);
-    // font-weight: 400;
-    // font-size: 16px;
-    // line-height: 1.25;
-    // letter-spacing: 0.03em;
+
     color: rgba(255, 255, 255, 0.6);
     transition: color var(--transition-duration)
       var(--transition-timing-function);
@@ -66,25 +78,15 @@
   .subscription-form__fild:focus & {
     border-color: var(--accent-color);
   }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    height: 50px;
+    margin-right: 12px;
+    padding: 0 15px;
+    margin-bottom: 0;
+  }
 }
-
-// .subscription-email:hover .form-email,
-// .subscription-email:focus .form-email {
-//   border-color: var(--accent-color);
-// }
-// .form-email::placeholder {
-//   font-weight: 400;
-//   font-size: 16px;
-//   line-height: 1.25;
-//   letter-spacing: 0.03em;
-//   color: rgba(255, 255, 255, 0.6);
-//   transition: color var(--transition-duration) var(--transition-timing-function);
-// }
-// .form-email:hover::placeholder,
-// .form-email:focus::placeholder {
-//   color: var(--accent-color);
-// }
-
 .subscription-form__icon {
   margin-left: 10px;
   background-color: transparent;
