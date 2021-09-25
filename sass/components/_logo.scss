@@ -3,7 +3,8 @@
   display: inline-block;
   font-family: "Raleway", sans-serif;
   font-style: normal;
-  @include font($fs: 26px, $lh: 1.19, $ls: 0.03em);
+  @include font($fs: 24px, $lh: 1.16, $ls: 0.03em);
+  // @include font($fs: 26px, $lh: 1.19, $ls: 0.03em);
 
   // font-weight: 700;
   // font-size: 26px;
