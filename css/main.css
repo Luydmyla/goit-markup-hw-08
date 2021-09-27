@@ -84,6 +84,8 @@ img {
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -647,6 +649,7 @@ img {
 
 .navig {
   display: flex;
+  align-items: center;
   width: 100%;
   height: auto;
 }
@@ -668,6 +671,23 @@ img {
 }
 
 /* ----ИКОНКИ ПЕРЕД ПОЧТОЙ И ТЕЛЕФОНОМ */
+.site-contact__item {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  align-items: center;
+}
+
+.site-contact__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.site-contact__icon {
+  /* fill: var(--primary-text-color); */
+  fill: currentColor;
+  margin-right: 10px;
+}
+
 .site-contact {
   display: none;
 }
@@ -724,20 +744,28 @@ img {
 
 .mobmenu {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   position: fixed;
   top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   padding: 48px 25px;
+  opacity: 1;
   background-color: var(--background-color);
+}
+
+.mobmenu.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 
 .mobmenu .container {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -819,6 +847,7 @@ img {
 }
 
 .mobmenu-socials__item {
+  display: flex;
   position: relative;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
   padding-right: 10px;
