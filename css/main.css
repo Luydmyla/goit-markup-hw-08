@@ -92,6 +92,8 @@ img {
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -670,7 +672,6 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 84px;
   }
   .site-navig .site-navig__link.current {
     color: var(--accent-color);
@@ -766,7 +767,7 @@ img {
   .site-contact {
     display: flex;
     flex-wrap: wrap;
-    width: auto;
+    width: min-content;
   }
 }
 
@@ -775,11 +776,13 @@ img {
     flex-wrap: nowrap;
     padding-top: 21px;
     padding-bottom: 21px;
+    margin-left: auto;
   }
 }
 
 .site-contact .site-contact__link {
   display: block;
+  white-space: nowrap;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.16;
