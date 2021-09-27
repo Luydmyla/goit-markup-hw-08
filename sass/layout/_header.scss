@@ -9,6 +9,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media screen and (min-width: 768px) {
+    height: 80px;
+  }
   @media screen and (min-width: 1200px) {
     justify-content: center;
   }
@@ -16,7 +19,7 @@
 .navig {
   display: flex;
   align-items: center;
-  width: 100%;
+  // width: 100%;
   height: auto;
 }
 
@@ -27,6 +30,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 84px;
     .site-navig__link {
       &.current {
         color: var(--accent-color);
@@ -34,75 +38,77 @@
     }
   }
 }
-// .site-navig__item {
-//   position: relative;
-//   &:not(:last-child) {
-//     margin-right: 50px;
-//   }
-//   & .current::after {
-//     position: absolute;
-//     top: calc(100% - 1px);
-//     /* bottom: -2px; */
-//     left: 0;
-//     width: 100%;
-//     height: 4px;
-//     background: var(--accent-color);
-//     border-radius: 2px;
-//     content: "";
-//     display: flex;
-//     justify-content: center;
-//   }
+.site-navig__item {
+  @media screen and (min-width: 768px) {
+    position: relative;
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+    & .current::after {
+      position: absolute;
+      top: calc(100% - 1px);
+      /* bottom: -2px; */
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--accent-color);
+      border-radius: 2px;
+      content: "";
+      display: flex;
+      justify-content: center;
+    }
+  }
+  // @media screen and (min-width: 768px){
 
-//   .site-navig__link {
-//     @include font($fw: 500, $fs: 14px, $lh: 1.14, $ls: 0.02em);
+  // }
 
-//     // font-weight: 500;
-//     // font-size: 14px;
-//     // line-height: 1.14;
-//     // letter-spacing: 0.02em;
-//     display: block;
-//     color: var(--title-text-color);
-//     transition: color var(--transition-duration)
-//       var(--transition-timing-function);
-//     cursor: pointer;
-//     padding-top: 32px;
-//     padding-bottom: 32px;
+  .site-navig__link {
+    @media screen and (min-width: 768px) {
+      @include font($fw: 500, $fs: 14px, $lh: 1.14, $ls: 0.02em);
+      padding-top: 32px;
+      padding-bottom: 32px;
+      display: block;
+      color: var(--title-text-color);
+      transition: color var(--transition-duration)
+        var(--transition-timing-function);
+      cursor: pointer;
+      &:hover,
+      &:focus {
+        color: var(--accent-color);
+      }
+    }
+  }
+}
 
-//     &:hover,
-//     &:focus {
-//       color: var(--accent-color);
-//     }
-//   }
-// }
+.site-item .link:hover,
+.site-item .link:focus {
+  color: var(--accent-color);
+}
 
-// .site-item .link:hover,
-// .site-item .link:focus {
-//   color: var(--accent-color);
-// }
-
-// .site-item .current::after {
-//   position: absolute;
-//   top: calc(100% - 1px);
-//   /* bottom: -2px; */
-//   left: 0;
-//   width: 100%;
-//   height: 4px;
-//   background: var(--accent-color);
-//   border-radius: 2px;
-//   content: "";
-//   display: flex;
-//   justify-content: center;
-// }
+.site-item .current::after {
+  position: absolute;
+  top: calc(100% - 1px);
+  /* bottom: -2px; */
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: 2px;
+  content: "";
+  display: flex;
+  justify-content: center;
+}
 /* ----ИКОНКИ ПЕРЕД ПОЧТОЙ И ТЕЛЕФОНОМ */
 
 .site-contact__item {
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
   align-items: center;
-
-  &:not(:last-child) {
-    margin-right: 50px;
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 32px;
+    padding-top: 32px;
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
   }
 }
 .site-contact__icon {
@@ -115,21 +121,21 @@
   display: none;
   @media screen and (min-width: 768px) {
     display: flex;
-    margin-left: auto;
+    flex-wrap: wrap;
+    width: auto;
+    // margin-left: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    padding-top: 21px;
+    padding-bottom: 21px;
   }
 
   .site-contact__link {
     display: block;
-
-    @include font($fw: 500, $fs: 14px, $lh: 1.14, $ls: 0.02em);
-    // font-weight: 500;
-    // font-size: 14px;
-    // line-height: 1.14;
-    // letter-spacing: 0.02em;
+    @include font($fw: 500, $fs: 12px, $lh: 1.16, $ls: 0.02em);
     color: var(--primary-text-color);
     cursor: pointer;
-    /* margin-top: 32px; */
-    /* margin-bottom: 32px; */
     margin-left: auto;
     transition: color var(--transition-duration)
       var(--transition-timing-function);
@@ -137,6 +143,9 @@
     &:hover,
     &:focus {
       color: var(--accent-color);
+    }
+    @media screen and (min-width: 1200px) {
+      @include font($fw: 500, $fs: 14px, $lh: 1.14, $ls: 0.02em);
     }
   }
 }
@@ -148,6 +157,9 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 .icon-burger {
   display: flex;
@@ -184,49 +196,46 @@
 // }
 
 .mobmenu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  padding: 48px 25px;
-  opacity: 1;
-
-  background-color: var(--background-color);
-  &.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-  }
-  .container {
-    width: 100%;
-    height: 100%;
+  @media screen and (max-width: 767px) {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 25px;
+    opacity: 1;
 
-    justify-content: space-between;
+    background-color: var(--background-color);
+    &.is-hidden {
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+    }
+    .container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-content: flex-start;
+      align-items: flex-start;
+      max-width: 480px;
 
-    // box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    //   0px 2px 1px rgba(0, 0, 0, 0.2);
-    // border-radius: 4px;
-    // transform: translate(-50%, -50%) scale(1);
-    // // transform: scale(1);
-    // transition: transform 750ms var(--transition-timing-function),
-    //   opacity 500ms var(--transition-timing-function);
-    // opacity: 1;
-    // @media screen and (min-width: 1200px) {
-    //   width: 528px;
-    //   min-height: 581px;
-    // }
+      justify-content: space-between;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }
+
 .mobmenu_close {
   display: block;
   position: absolute;
-  top: -5px;
-  right: 0px;
+  top: 10px;
+  right: 15px;
   width: 40px;
   height: 40px;
   display: flex;
@@ -247,6 +256,7 @@
     border-color: var(--accent-color);
   }
 }
+
 .mobmenu-nav__list {
   display: block;
 }
@@ -261,8 +271,12 @@
   @include font($fw: 500, $fs: 40px, $lh: 1.17, $ls: 0.02em);
   color: var(--title-text-color);
 }
-.mobmenu__bottom {
-  display: block;
+.mobmenu__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
 }
 .mobmenu-contacts__list {
   margin-bottom: 64px;
@@ -273,13 +287,20 @@
   }
 }
 .mobmenu-contacts__link {
-  @include font($fw: 500, $fs: 34px, $lh: 1.17, $ls: 0.02em);
+  @include font($fw: 500, $fs: 24px, $lh: 1.17, $ls: 0.02em);
   color: var(--accent-color);
+
+  @media screen and (min-width: 480px) {
+    @include font($fw: 500, $fs: 34px, $lh: 1.17, $ls: 0.02em);
+  }
 }
 
 .mobmenu-contacts__email-link {
-  @include font($fw: 500, $fs: 24px, $lh: 1.16, $ls: 0.02em);
+  @include font($fw: 500, $fs: 22px, $lh: 1.16, $ls: 0.02em);
   color: var(--primary-text-color);
+  @media screen and (min-width: 480px) {
+    @include font($fw: 500, $fs: 24px, $lh: 1.17, $ls: 0.02em);
+  }
 }
 .mobmenu-socials__list {
   display: flex;
@@ -290,17 +311,26 @@
 .mobmenu-socials__item {
   display: flex;
   position: relative;
-  &:not(:last-child) {
-    margin-right: 10px;
-  }
   border-right: 1px solid rgba(33, 33, 33, 0.2);
-  padding-right: 10px;
+  padding-right: 5px;
+  &:not(:last-child) {
+    margin-right: 5px;
+  }
   &:last-child {
     border: none;
+  }
+  @media screen and (min-width: 480px) {
+    padding-right: 10px;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
   }
 }
 
 .mobmenu-socials__link {
-  @include font($fw: 500, $fs: 18px, $lh: 1.22, $ls: 0.02em);
+  @include font($fw: 500, $fs: 14px, $lh: 1.22, $ls: 0.02em);
   color: var(--accent-color);
+  @media screen and (min-width: 480px) {
+    @include font($fw: 500, $fs: 18px, $lh: 1.22, $ls: 0.02em);
+  }
 }

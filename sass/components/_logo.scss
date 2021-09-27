@@ -4,15 +4,15 @@
   font-family: "Raleway", sans-serif;
   font-style: normal;
   @include font($fs: 24px, $lh: 1.16, $ls: 0.03em);
-
+  margin-right: 88px;
   @media screen and (min-width: 1200px) {
     @include font($fs: 26px, $lh: 1.19, $ls: 0.03em);
+    margin-right: 93px;
   }
   color: #000000;
   padding-top: 24px;
   padding-bottom: 25px;
   transition: color var(--transition-duration) var(--transition-timing-function);
-  margin-right: 93px;
   &:focus,
   &:hover {
     color: var(--accent-color);
