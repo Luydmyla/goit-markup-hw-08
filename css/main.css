@@ -522,7 +522,6 @@ img {
 }
 
 .form-checkbox__contract {
-  margin-left: 4px;
   color: var(--accent-color);
   text-decoration-line: underline;
 }
@@ -743,6 +742,10 @@ img {
   align-items: center;
 }
 
+.site-contact__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 @media screen and (min-width: 1200px) {
   .site-contact__item {
     padding-bottom: 32px;
@@ -849,6 +852,7 @@ img {
     height: 100vh;
     padding: 48px 25px;
     opacity: 1;
+    z-index: 9999;
     background-color: var(--background-color);
   }
   .mobmenu.is-hidden {
@@ -1305,6 +1309,8 @@ img {
 }
 
 .team-card_img {
+  width: 100%;
+  height: auto;
   margin-right: auto;
   margin-left: auto;
 }

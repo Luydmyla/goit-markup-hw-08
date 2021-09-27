@@ -105,6 +105,10 @@
 .site-contact__item {
   display: flex;
   align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
   @media screen and (min-width: 1200px) {
     padding-bottom: 32px;
     padding-top: 32px;
@@ -212,6 +216,7 @@
     height: 100vh;
     padding: 48px 25px;
     opacity: 1;
+    z-index: 9999;
 
     background-color: var(--background-color);
     &.is-hidden {

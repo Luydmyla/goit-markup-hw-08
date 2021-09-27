@@ -24,15 +24,15 @@
   </head>
   <body>
     <!-- Шапка страницы -->
-    <!-- <header class="header">
-      <div class="container">
-        <nav class="navig"> -->
-    <!-- Логотип - это ссылка -->
-    <!-- <a href="./index.html" lang="en" class="logo link">
+    <header>
+      <div class="container header">
+        <nav class="navig">
+          <!-- Логотип - это ссылка -->
+          <a href="./index.html" lang="en" class="logo link">
             <span class="logo__web">Web</span>Studio
-          </a> -->
-    <!-- Навигация на другие страницы -->
-    <!-- <ul class="site-navig list">
+          </a>
+          <!-- Навигация на другие страницы -->
+          <ul class="site-navig list">
             <li class="site-navig__item">
               <a href="./index.html" class="site-navig__link link">Студия</a>
             </li>
@@ -47,19 +47,19 @@
           </ul>
         </nav>
         <ul class="site-contact list">
-          <li class="site-contact__item"> -->
-    <!-- Ссылка на адрес электронной почты  -->
+          <li class="site-contact__item">
+            <!-- Ссылка на адрес электронной почты  -->
 
-    <!-- <a href="mailto:info@devstudio.com" class="site-contact__link link">
+            <a href="mailto:info@devstudio.com" class="site-contact__link link">
               <svg class="site-contact__icon" width="16" height="12">
                 <use href="./images/sprite.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com
             </a>
           </li>
-          <li class="site-contact__item"> -->
-    <!-- Ссылка на телефонный номер -->
-    <!-- <a href="tel:+380961111111" class="site-contact__link link">
+          <li class="site-contact__item">
+            <!-- Ссылка на телефонный номер -->
+            <a href="tel:+380961111111" class="site-contact__link link">
               <svg class="site-contact__icon" width="10" height="16">
                 <use href="./images/sprite.svg#icon-smartphone"></use>
               </svg>
@@ -67,8 +67,78 @@
             </a>
           </li>
         </ul>
+        <button type="button" class="menu-open" data-mobmenu-open>
+          <svg
+            id="mobmodal__button-open"
+            width="40"
+            height="40"
+            class="icon-burger"
+          >
+            <use href="./images/sprite.svg#icon-burger-menu"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <div class="mobmenu is-hidden" data-mobmenu>
+        <div class="container">
+          <button type="button" class="mobmenu_close" data-mobmenu-close>
+            <svg id="modal__button-icon" width="18" height="18">
+              <use href="./images/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <ul class="mobmenu-nav__list list">
+            <li class="mobmenu-nav__item">
+              <a href="./index.html" class="mobmenu-nav__link link">Студия</a>
+            </li>
+            <li class="mobmenu-nav__item">
+              <a href="./portfolio.html" class="mobmenu-nav__link link"
+                >Портфолио</a
+              >
+            </li>
+            <li class="mobmenu-nav__item">
+              <a href="/contacts" class="mobmenu-nav__link link">Контакты</a>
+            </li>
+          </ul>
+          <div class="mobmenu__wrap">
+            <ul class="mobmenu-contacts__list list">
+              <li class="mobmenu-contacts__item">
+                <a href="tel:+380961111111" class="mobmenu-contacts__link link"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobmenu-contacts__item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mobmenu-contacts__email-link link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobmenu-socials__list list">
+              <li class="mobmenu-socials__item">
+                <a href="./index.html" class="mobmenu-socials__link link"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mobmenu-socials__item">
+                <a href="./index.html" class="mobmenu-socials__link link"
+                  >Twitter</a
+                >
+              </li>
+              <li class="mobmenu-socials__item">
+                <a href="./index.html" class="mobmenu-socials__link link"
+                  >Facebook</a
+                >
+              </li>
+              <li class="mobmenu-socials__item">
+                <a href="./index.html" class="mobmenu-socials__link link"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <!-- Уникальный контент страницы -->
     <main>
       <!--filters-->
