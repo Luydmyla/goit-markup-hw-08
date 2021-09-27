@@ -105,10 +105,12 @@
 .site-contact__item {
   display: flex;
   align-items: center;
-
-  &:not(:last-child) {
-    margin-bottom: 10px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
+
   @media screen and (min-width: 1200px) {
     padding-bottom: 32px;
     padding-top: 32px;
