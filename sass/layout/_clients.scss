@@ -11,7 +11,6 @@
 .clients-list {
   width: 100%;
   display: flex;
-  // justify-content: center;
   flex-wrap: wrap;
   @media screen and (min-width: 1200px) {
     flex-wrap: nowrap;
@@ -21,7 +20,7 @@
 }
 .clients-list__item {
   width: 100%;
-  height: auto;
+  height: 90px;
   margin-right: 30px;
   margin-bottom: 30px;
   @media screen and (max-width: 767px) {
@@ -62,6 +61,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: 100%;
   padding: 16px 32px;
   border: 1px solid var(--socials-icon-color-first);
   box-sizing: border-box;

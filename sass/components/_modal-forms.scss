@@ -1,14 +1,15 @@
 /* -----Форма для ввода даных пользователя */
 
 .form-field {
-  /* position: relative; */
-  left: 0;
+  // position: relative;
+  // left: 0;
+  width: 100%;
   display: block;
   margin-bottom: 10px;
 }
 .form-fild__lable {
   display: block;
-  @include font($fw: 400, $fs: 12px, $lh: 1.15, $ls: 0.01em);
+  @include font($fw: 400, $fs: 12px, $lh: 1.16, $ls: 0.01em);
   // font-weight: 400;
   // font-size: 12px;
   // line-height: 1.16;
@@ -165,11 +166,14 @@
   border: 2px solid var(--title-text-color);
 } */
 .form-checkbox {
-  left: 0;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 .form-checkbox__wrap {
+  display: block;
   width: 16px;
   height: 15px;
   display: flex;
@@ -209,6 +213,13 @@
   border: transparent;
 }
 .form-checkbox__agreement {
+  @include font($fw: 400, $fs: 12px, $lh: 1.16, $ls: 0.03em);
+  color: var(--primary-text-color);
+  @media screen and (min-width: 1200px) {
+    @include font($fw: 400, $fs: 14px, $lh: 1.5, $ls: 0.03em);
+  }
+}
+.form-checkbox__contract {
   margin-left: 4px;
   color: var(--accent-color);
   text-decoration-line: underline;
