@@ -222,34 +222,59 @@
           <h2 class="sections-title-second">Чем мы занимаемся</h2>
           <ul class="work-list list">
             <li class="work-list__item">
-              <img
-                src="./images/img-1.jpg"
-                alt="программист работает за столом в офисе  изображение крупным планом"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="./images/img-1.jpg 1x, ./images/img-1@2x.jpg 2x"
+                  media="(min-width:1200px)"
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/img-1.jpg"
+                  alt="программист работает за столом в офисе  изображение крупным планом"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <div class="work-list__image">
                 <h2 class="work-list__text">Десктопные приложения</h2>
               </div>
             </li>
             <li class="work-list__item">
-              <img
-                src="./images/img-2.jpg"
-                alt="веб дизайнеры разработчики приложений для смартфонов-команда создает рабочий интерфейс для мобильных телефонов"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="./images/img-2.jpg 1x, ./images/img-2@2x.jpg 2x"
+                  media="(min-width:1200px)"
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/img-2.jpg"
+                  alt="веб дизайнеры разработчики приложений для смартфонов-команда создает рабочий интерфейс для мобильных телефонов"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <div class="work-list__image">
                 <h2 class="work-list__text">Мобильные приложения</h2>
               </div>
             </li>
             <li class="work-list__item">
-              <img
-                src="./images/img-3.jpg"
-                alt="Креативный художник веб-дизайна с рабочим цветным выбором графическим планшетом_"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <!-- <source
+                  srcset="photo.webp 1x, photo@2x.webp 2x"
+                  type="image/webp"
+                /> -->
+                <source
+                  srcset="./images/img-3.jpg 1x, ./images/img-3@2x.jpg 2x"
+                  media="(min-width:1200px)"
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/img-3.jpg"
+                  alt="Креативный художник веб-дизайна с рабочим цветным выбором графическим планшетом_"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <div class="work-list__image">
                 <h2 class="work-list__text">Дизайнерские решения</h2>
               </div>
@@ -264,13 +289,62 @@
           <h2 class="sections-title-second">Наша команда</h2>
           <ul class="team-list list">
             <li class="team-card">
-              <img
-                src="./images/team-1.jpg"
-                alt="дизайнер Игорь Демьяненко"
-                width="270"
-                height="260"
-                class="team-card_img"
-              />
+              <picture>
+                <!-- <source
+                  
+                  srcset="
+                    ./images/desktop/img.webp    1x,
+                    ./images/desktop/img@2x.webp 2x
+                  "
+                  media="(min-width:1200px)"
+                  type="image/web"
+                /> -->
+
+                <source
+                  srcset="
+                    ./images/desk/team-1.jpg       1x,
+                    ./images/desk/deskteam1-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <!-- <source
+                  srcset="
+                    ./images/tablet/img.webp    1x,
+                    ./images/tablet/img@2x.webp 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/web"
+                /> -->
+                <source
+                  srcset="
+                    ./images/tab/tabteam1-1x.jpg 1x,
+                    ./images/tab/tabteam1-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <!-- <source
+                                    srcset="
+                    ./images/mobile/img.webp    1x,
+                    ./images/mobile/img@2x.webp 2x
+                  "
+                  media="(min-width:320px)"
+                  type="image/web"
+                /> -->
+                <source
+                  srcset="
+                    ./images/mob/mobteam1-1x.jpg 1x,
+                    ./images/mob/mobteam1-2x.jpg 2x
+                  "
+                  media="(min-width:320px)"
+                />
+                <img
+                  src="./images/desk/team-1.jpg"
+                  alt="дизайнер Игорь Демьяненко"
+                  width="270"
+                  height="260"
+                  class="team-card_img"
+                />
+              </picture>
               <div class="team-card__footer">
                 <h3 class="team-card__title">Игорь Демьяненко</h3>
                 <p lang="en">Product Designer</p>
@@ -307,13 +381,60 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                src="./images/team-2.jpg"
-                alt=" фронтенд разработчик Ольга Репина"
-                width="270"
-                height="260"
-                class="team-card_img"
-              />
+              <picture>
+                <!-- <source
+                  srcset="
+                    ./images/desktop/img.webp    1x,
+                    ./images/desktop/img@2x.webp 2x
+                  "
+                  media="(min-width:1200px)"
+                  type="image/web"
+                /> -->
+                <source
+                  srcset="
+                    ./images/desk/team-2.jpg       1x,
+                    ./images/desk/deskteam2-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <!-- <source
+                  srcset="
+                    ./images/tablet/img.webp    1x,
+                    ./images/tablet/img@2x.webp 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/web"
+                /> -->
+                <source
+                  srcset="
+                    ./images/tab/tabteam2-1x.jpg 1x,
+                    ./images/tab/tabteam2-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <!-- <source
+                  srcset="
+                    ./images/mobile/img.webp    1x,
+                    ./images/mobile/img@2x.webp 2x
+                  "
+                  media="(min-width:320px)"
+                  type="image/web"
+                /> -->
+                <source
+                  srcset="
+                    ./images/mob/mobteam2-1x.jpg 1x,
+                    ./images/mob/mobteam2-2x.jpg 2x
+                  "
+                  media="(min-width:320px)"
+                />
+                <img
+                  src="./images/desk/team-2.jpg"
+                  alt=" фронтенд разработчик Ольга Репина"
+                  width="270"
+                  height="260"
+                  class="team-card_img"
+                />
+              </picture>
               <div class="team-card__footer">
                 <h3 class="team-card__title">Ольга Репина</h3>
                 <p lang="en">Frontend Developer</p>
@@ -350,13 +471,60 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                src="./images/team-3.jpg"
-                alt="маркетолог Николай Тарасов"
-                width="270"
-                height="260"
-                class="team-card_img"
-              />
+              <picture>
+                <!-- <source
+                  srcset="
+                    ./images/desktop/img.webp    1x,
+                    ./images/desktop/img@2x.webp 2x
+                  "
+                  media="(min-width:1200px)"
+                  type="image/web"
+                /> -->
+                <source
+                  srcset="
+                    ./images/desk/team-3.jpg       1x,
+                    ./images/desk/deskteam3-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <!-- <source
+                  srcset="
+                    ./images/tablet/img.webp    1x,
+                    ./images/tablet/img@2x.webp 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/web"
+                /> -->
+                <source
+                  srcset="
+                    ./images/tab/tabteam3-1x.jpg 1x,
+                    ./images/tab/tabteam3-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <!-- <source
+                  srcset="
+                    ./images/mobile/img.webp    1x,
+                    ./images/mobile/img@2x.webp 2x
+                  "
+                  media="(min-width:320px)"
+                  type="image/web"
+                /> -->
+                <source
+                  srcset="
+                    ./images/mob/mobteam3-1x.jpg 1x,
+                    ./images/mob/mobteam3-2x.jpg 2x
+                  "
+                  media="(min-width:320px)"
+                />
+                <img
+                  src="./images/desk/team-3.jpg"
+                  alt="маркетолог Николай Тарасов"
+                  width="270"
+                  height="260"
+                  class="team-card_img"
+                />
+              </picture>
               <div class="team-card__footer">
                 <h3 class="team-card__title">Николай Тарасов</h3>
                 <p lang="en">Marketing</p>
@@ -393,13 +561,60 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                src="./images/team-4.jpg"
-                alt="дизайнер Михаил Ермаков"
-                width="270"
-                height="260"
-                class="team-card_img"
-              />
+              <picture>
+                <!-- <source
+                  srcset="
+                    ./images/desktop/img.webp    1x,
+                    ./images/desktop/img@2x.webp 2x
+                  "
+                  media="(min-width:1200px)"
+                  type="image/web"
+                /> -->
+                <source
+                  srcset="
+                    ./images/desk/team-4.jpg       1x,
+                    ./images/desk/deskteam4-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <!-- <source
+                  srcset="
+                    ./images/tablet/img.webp    1x,
+                    ./images/tablet/img@2x.webp 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/web"
+                /> -->
+                <source
+                  srcset="
+                    ./images/tab/tabteam4-1x.jpg 1x,
+                    ./images/tab/tabteam4-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <!-- <source
+                  srcset="
+                    ./images/mobile/img.webp    1x,
+                    ./images/mobile/img@2x.webp 2x
+                  "
+                  media="(min-width:320px)"
+                  type="image/web"
+                /> -->
+                <source
+                  srcset="
+                    ./images/mob/mobteam4-1x.jpg 1x,
+                    ./images/mob/mobteam4-2x.jpg 2x
+                  "
+                  media="(min-width:320px)"
+                />
+                <img
+                  src="./images/desk/team-4.jpg"
+                  alt="дизайнер Михаил Ермаков"
+                  width="270"
+                  height="260"
+                  class="team-card_img"
+                />
+              </picture>
               <div class="team-card__footer">
                 <h3 class="team-card__title">Михаил Ермаков</h3>
                 <p lang="en">UI Designer</p>
