@@ -71,6 +71,8 @@ ul {
 
 img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 .container {
@@ -84,16 +86,12 @@ img {
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
-    margin-left: 0;
-    margin-right: 0;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -107,6 +105,13 @@ img {
 .sections {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .sections {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 /* ----------КНОПКА---------- */
@@ -157,6 +162,7 @@ img {
     font-size: 36px;
     line-height: 1.16;
     letter-spacing: 0.03em;
+    margin-bottom: 50px;
   }
 }
 
@@ -368,6 +374,10 @@ img {
 .form-fild__wrap {
   display: block;
   position: relative;
+}
+
+.form-field > .form-fild__wrap:hover .form-fild__lable {
+  color: var(--accent-color);
 }
 
 .modal-form__input {
@@ -636,7 +646,12 @@ img {
 
 /* -----HEADER------------------ */
 .header {
+  width: 100%;
+  height: auto;
   border-bottom: 1px solid #ececec;
+}
+
+.header-container {
   height: 60px;
   display: flex;
   align-items: center;
@@ -644,13 +659,13 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .header {
+  .header-container {
     height: 80px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .header {
+  .header-container {
     justify-content: center;
   }
 }
@@ -1186,9 +1201,15 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  text-align: center;
   text-transform: uppercase;
   color: var(--title-text-color);
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .feature-list__text {
+    text-align: start;
+  }
 }
 
 .feature-list__item p {
@@ -1347,6 +1368,12 @@ img {
 .clients {
   display: block;
   margin-top: 56px;
+}
+
+@media screen and (max-width: 1200px) {
+  .clients {
+    margin-top: 0;
+  }
 }
 
 .clients-list {
@@ -1528,6 +1555,12 @@ img {
   margin-bottom: 20px;
 }
 
+@media screen and (min-width: 768px) {
+  .sections-footer-title {
+    text-align: start;
+  }
+}
+
 /* адресс ссылка  */
 .footer-contacts {
   width: 100%;
@@ -1615,7 +1648,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .filters-button {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
   }
 }
 
@@ -1675,7 +1708,7 @@ img {
   margin-bottom: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .project-item {
     width: calc((100% - 30px) / 2);
   }
@@ -1690,11 +1723,6 @@ img {
 @media screen and (min-width: 1200px) {
   .project-item {
     width: 370px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .project-item {
     margin-right: 30px;
   }
   .project-item:nth-child(3n) {
@@ -1769,7 +1797,6 @@ img {
   padding: 20px 24px;
   border-left: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
   box-sizing: border-box;
 }
 /*# sourceMappingURL=main.css.map */
