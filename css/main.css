@@ -908,6 +908,7 @@ img {
   border: none;
   box-sizing: border-box;
   background-color: var(--background-color);
+  fill: var(--title-text-color);
   transition: fill var(--transition-duration) var(--transition-timing-function);
   cursor: pointer;
 }
@@ -1684,8 +1685,8 @@ img {
   margin-bottom: 15px;
 }
 
-.filters-button .filters-item + .filters-item {
-  margin-left: 8px;
+.filters-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 /*--------- стили для страницы портфолио--------------- */
