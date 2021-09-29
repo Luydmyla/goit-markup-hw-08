@@ -285,11 +285,25 @@
     margin-bottom: 0;
   }
   color: var(--title-text-color);
+
+  // &:hover .mobmenu-nav__link,
+  // &:focus .mobmenu-nav__link {
+  //   color: var(--accent-color);
+  // }
 }
 .mobmenu-nav__link {
+  display: block;
   @include font($fw: 500, $fs: 40px, $lh: 1.17, $ls: 0.02em);
   color: var(--title-text-color);
+  &:hover,
+  &S:focus {
+    color: var(--accent-color);
+  }
 }
+// .mobmenu-nav__item .link:hover,
+// .mobmenu-nav__item .link:focus {
+//   color: var(--accent-color);
+// }
 .mobmenu__wrap {
   display: flex;
   flex-wrap: wrap;
