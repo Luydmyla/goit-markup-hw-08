@@ -1,5 +1,9 @@
 .sections-team {
   background-color: var(--second-background-color);
+  @media screen and (min-width: 1200px) {
+    padding-top: 132px;
+    padding-bottom: 56px;
+  }
 }
 .team-list {
   width: 100%;
@@ -37,8 +41,8 @@
     &:nth-child(odd) {
       margin-right: 30px;
     }
-    &:last-child {
-      margin-bottom: 30px;
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
     }
   }
   @media screen and (min-width: 1200px) {

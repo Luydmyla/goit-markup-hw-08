@@ -9,7 +9,7 @@
     margin-bottom: 30px;
   }
   @media screen and (min-width: 1200px) {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
 }
 .filters-item button {
@@ -57,8 +57,10 @@
   &:not(:last-child) {
     margin-right: 8px;
   }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
 }
-
 // .filters-button .filters-item + .filters-item {
 //   margin-left: 8px;
 // }

@@ -1059,7 +1059,7 @@ img {
 
 @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/mob/mobheader@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mob/mobheader@2x.jpg);
   }
 }
 
@@ -1129,12 +1129,17 @@ img {
   display: block;
 }
 
+@media screen and (max-width: 767px) {
+  .feature-list {
+    margin-bottom: -60px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .feature-list {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 }
 
@@ -1142,20 +1147,31 @@ img {
   margin-bottom: 30px;
 }
 
-@media screen and (min-width: 768px) {
+.feature-list__item:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .feature-list__item {
     flex-basis: calc((100% - 30px) / 2);
+  }
+  .feature-list__item:nth-child(odd) {
+    margin-right: 30px;
+  }
+  .feature-list__item:nth-last-child(-n + 2) {
+    margin-bottom: 0;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .feature-list__item {
-    flex-basis: calc((100% - 120px) / 4);
+    flex-basis: calc((100% - 90px) / 4);
+    margin-right: 30px;
+    margin-bottom: 0;
   }
-}
-
-.feature-list__item:last-child {
-  margin-bottom: 0;
+  .feature-list__item:last-child {
+    margin-right: 0;
+  }
 }
 
 /* -----ИКОНКИ ПЕРЕД СЕКЦИЕЙ ПРЕИМУЩЕСТВА через backgroumd и befor */
@@ -1276,6 +1292,13 @@ img {
   background-color: var(--second-background-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .sections-team {
+    padding-top: 132px;
+    padding-bottom: 56px;
+  }
+}
+
 .team-list {
   width: 100%;
   display: block;
@@ -1319,8 +1342,8 @@ img {
   .team-card:nth-child(odd) {
     margin-right: 30px;
   }
-  .team-card:last-child {
-    margin-bottom: 30px;
+  .team-card:nth-last-child(-n + 2) {
+    margin-bottom: 0;
   }
 }
 
@@ -1376,9 +1399,15 @@ img {
   margin-top: 56px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
   .clients {
     margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients {
+    margin-top: 38px;
   }
 }
 
@@ -1433,6 +1462,7 @@ img {
     display: flex;
     width: calc((100% - 150px) / 6);
     height: auto;
+    margin-bottom: 0;
   }
   .clients-list__item:last-child {
     margin-right: 0;
@@ -1561,7 +1591,7 @@ img {
   margin-bottom: 20px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .sections-footer-title {
     text-align: start;
   }
@@ -1654,7 +1684,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .filters-button {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
 }
 
@@ -1692,6 +1722,12 @@ img {
 
 .filters-item:not(:last-child) {
   margin-right: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+  .filters-item {
+    margin-bottom: 0;
+  }
 }
 
 /*--------- стили для страницы портфолио--------------- */
